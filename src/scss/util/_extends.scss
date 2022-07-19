@@ -1,0 +1,32 @@
+
+.container
+{
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.flex
+{
+    display: flex;
+    align-items: center;
+}
+.button
+{
+    display: flex;
+    background-color: unset;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+.link
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    align-items: center;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+}

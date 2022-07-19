@@ -1,0 +1,120 @@
+@use '../util/extends';
+
+.footer
+{
+    background-color: #282A35;
+    padding: 4rem 2.5rem;
+    &__container
+    {
+        @extend .container;
+        text-align: center;
+    }
+    &__top-container
+    {
+        @extend .flex;
+        justify-content: space-between;
+    }
+    &__link-container
+    {
+        @extend .flex;
+        gap: .5rem;
+        &--ungap
+        {
+            gap: 0;
+        }
+    }
+    &__link
+    {
+        @extend .link;
+        font-size: 17px;
+        font-weight: bold;
+        background-color: #fff;
+        text-transform: uppercase;
+        padding: .5rem 1.2rem;
+        border-radius: .5rem;
+        &:hover
+        {
+            background-color: rgb(235, 235, 235);
+        }
+        &--unpad
+        {
+            background-color: unset;
+            font-size: 15px;
+            letter-spacing: .3rem;
+            color: #fff;
+            padding: 0;
+            &:hover
+            {
+                color: #4CAF50;
+                background-color: unset;
+            }
+            &:hover span
+            {
+                color: #fff;
+                background-color: unset;
+            }
+        }
+        &--green
+        {
+            display: block;
+            width: 775px;
+            margin: 0 auto;
+            background-color: #04AA6D;
+            color: #fff;
+            padding: .8rem ;
+            border-radius: 2rem;
+            &:hover
+            {
+                background-color: #068d5b;
+                color: #fff;
+            }
+        }
+    }
+    &__content
+    {
+        @extend .flex;
+        justify-content: flex-end;
+        margin: 2rem 0;
+    }
+    &__icon-container
+    {
+        @extend .flex;
+    }
+    &__icon
+    {
+        padding: 1rem 1.2rem;
+        font-size: 1.2rem;
+        border-radius: .5rem;
+        color: #fff;
+        &:hover
+        {
+            background-color: #fff;
+            color: rgb(0, 0, 0);
+        }
+    }
+    &__text
+    {
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+    }
+    &__link-text
+    {
+        color: #fff;
+        &:hover
+        {
+            color: #4CAF50;
+        }
+    }
+    &__thumb
+    {
+        display: inline-block;
+        margin: 2rem auto 2rem auto;
+        color: #fff;
+        font-size: 2.5rem;
+        &:hover
+        {
+            opacity: .8;
+        }
+    }
+}

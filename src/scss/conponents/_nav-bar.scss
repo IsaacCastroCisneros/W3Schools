@@ -1,0 +1,147 @@
+@use '../util/extends';
+
+.nav-bar
+{
+   @extend .container,.flex;
+   position: relative;
+   top: 0;
+   font-weight: bold;
+   justify-content: space-between;
+   &__list
+   {
+     @extend .flex;
+     list-style: none;
+   }
+   &__logo-link
+   {
+       height: 2.8rem;
+       display: block;
+       padding: 0 1rem;
+       &:hover
+       {
+           filter: contrast(80%);
+       }
+   }    
+   &__logo
+   {
+       height: 100%;
+   }
+   &__button
+   {
+       @extend .button;
+       align-items: flex-start;
+       gap: .2rem;
+       padding: 24px 16px;
+       &:hover
+       {
+           background-color: #04AA6D;
+           color: #fff;
+       }
+       &--mob
+       {
+           display: none;
+       }
+   }
+   &__link
+   {
+       @extend .link;
+       height: 71px;
+       font-size: 1.2rem;
+       padding: 0 16px;
+       span
+       {
+           font-size: .8rem;
+           font-weight: bold;
+           padding: .2rem .4rem;
+           border-radius: .8rem;
+           background-color: #fff;
+           border: 1px solid rgb(0, 0, 0);
+           margin: 0 0 0 .4rem;
+       }
+       &--pad
+       {
+           height: unset;
+           padding: 8px 16px;
+           background-color:#FFC0C7;
+           border-radius: 25px;
+           margin-right:1rem;
+       }
+       &--no-pad
+       {
+           background-color:unset;
+           &:hover
+           {
+               background-color: #04AA6D;
+               color: #fff;
+           }
+       }
+       &--green
+       {
+           width: 130px;
+           background-color: #04AA6D;
+           color: #fff;
+           justify-content: center;
+           &:hover
+           {
+               filter: brightness(95%);
+           }
+       }
+       &:hover
+       {
+           background-color: #04AA6D;
+           color: #fff;
+       }
+       &:hover span
+       {
+           color: black;
+       }
+   }
+   &__icon
+   {
+       @extend .button;
+       margin-right: 1.5rem;
+       &:hover
+       {
+           color: #04AA6D;
+       }
+   }
+}
+@media only screen and (max-width:1200px) 
+{
+    .nav-bar__span-left
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width:1152px) 
+{
+    .nav-bar__span-right
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width:1080px) 
+{
+    .nav-bar__link--none
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width:992px) 
+{
+    .nav-bar__item--none-first
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width:860px) 
+{
+    .nav-bar__item--none
+    {
+        display: none;
+    }
+    .nav-bar__button--mob
+    {
+        display: flex;
+    }
+}
